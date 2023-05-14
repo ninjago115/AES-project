@@ -1,0 +1,186 @@
+%% LyX 2.3.7 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+
+\geometry{left=25mm, right=15mm}
+\geometry{top=15mm,bottom=20mm}
+
+\setlength{\parindent}{15pt}
+\begin{document}
+\tableofcontents
+\newpage
+
+\section{Mathematical Basis}
+
+\subsection{Definitions}
+Matrix Operations, Groups, Rings and Fields, Vector
+Spaces, Polynomials over a Field, Operations on Polynomials.
+
+\subsubsection{Matrix Operations:}
+Scalar multiplication:
+
+\begin{itemize}
+\item $a$$\odot$$\begin{bmatrix}b, & c\\
+d, & e\\
+f, & g
+\end{bmatrix}$= $\begin{bmatrix}a\cdot b, & a\text{\ensuremath{\cdot c}}\\
+a\cdot d, & a\cdot e\\
+a\cdot f, & a\cdot g
+\end{bmatrix}$
+\end{itemize}
+
+Matrix addition: Entrywise sum in this case $\rightarrow$ both matrixes
+have same amount of rows and columns
+
+\begin{itemize}
+\item $\begin{bmatrix}a_{1}, & a_{2}\\
+a_{3}, & a_{4}\\
+a_{5}, & a_{6}
+\end{bmatrix}$$\oplus\begin{bmatrix}b_{1}, & b_{2}\\
+b_{3}, & b_{4}\\
+b_{5}, & b_{6}
+\end{bmatrix}$=$\begin{bmatrix}a_{1}+b_{1}, & a_{2}+b_{2}\\
+a_{3}+b_{3}, & a_{4}+b_{4}\\
+a_{5}+b_{4}, & a_{6}+b_{6}
+\end{bmatrix}$
+\end{itemize}
+Scalar addition: $\rightarrow$ multiply scalar with basis of the matrix and then perform matrix addition
+
+\subsubsection{Abelian Group < G, + >:}
+
+
+Sets of elements with additional structure; ways of combining elements
+to produce another element of the set.
+
+Example: < $\mathbb{Z}n,$+ > this group consist of all the integers
+from 0 to n - 1 (and the operation is addition modulo n if it is a
+finite group) 
+
+\begin{itemize}
+\item  closed: \ensuremath{\forall} a, b \ensuremath{\in} G : a + b \ensuremath{\in}
+G 
+
+\item associative: \ensuremath{\forall} a, b, c \ensuremath{\in} G : (a
++ b) + c = a + (b + c)
+\item commutative: \ensuremath{\forall} a, b \ensuremath{\in} G : a + b
+= b + a 
+\item neutral element: \ensuremath{\exists} 0 \ensuremath{\in} G, \ensuremath{\forall}
+a \ensuremath{\in} G : a + 0 = a 
+\item inverse elements: \ensuremath{\forall} a \ensuremath{\in} G, \ensuremath{\exists}
+b \ensuremath{\in} G : a + b = 0
+
+\end{itemize}
+
+\subsubsection{Ring < R, +, $\cdot$ >:}
+
+
+Closed set R with two operations '+' and '$\cdot$'. The set is an
+abelian group under < R, + > and the operation '$\cdot$' is an associative
+over R and there is a neutral element for '$\cdot$' in R (Usually
+1). 
+The two operations are related by the law of distributivity:
+
+\begin{itemize}
+\item \ensuremath{\forall} a, b, c \ensuremath{\in} R : (a + b) \textperiodcentered{}
+c = (a \textperiodcentered{} c)+(b \textperiodcentered{} c)
+
+Depending on if '$\cdot$' is commutative, a Ring can be a \emph{commutative
+}or a \emph{noncommutative} Ring.
+\end{itemize}
+
+\subsubsection{Field< F, +, $\cdot$ > :}
+
+
+A set is a Field if < F, +, $\cdot$ > is a commutative Ring and there
+exists an inverse element for all F in F with respect to the operation
+'$\cdot$', except for the element 0 (Neutral element of < F, + >).
+
+If < F, + > and < F\textbackslash\{0\}, $\cdot$ > are
+abelian groups and the law of distributivity applies, the neutral
+element of < F\textbackslash\{0\}, \textperiodcentered{} > is called
+the \emph{unit element} of the field.
+
+\subsubsection{Vector spaces  < F, V, +, $\oplus$, $\cdot$, $\odot$ >:}
+
+
+Scalars: Field < F, +, $\cdot$ > with unit element 1.
+
+Vectors: Abelian Group < V, + >
+
+A vector space (also called linear space) < F, V, +, $\oplus$, $\cdot$,
+$\odot$ > is a set whose elements, often called vectors, may be added
+together and multiplied by numbers called scalars. 
+
+A vector space has to follow these conditions: 
+\begin{itemize}
+\item Distributivity: \ensuremath{\forall} a \ensuremath{\in} F, \ensuremath{\forall}
+v, w \ensuremath{\in} V : a (v+w) = (a v) + (a w) or \ensuremath{\forall}
+a, b \ensuremath{\in} F, \ensuremath{\forall} v \ensuremath{\in} V
+: (a + b) v = (a v) + (a v)
+\item Associativity: \ensuremath{\forall} a, b \ensuremath{\in} F, \ensuremath{\forall}
+v \ensuremath{\in} V : (a \textperiodcentered{} b) v = a (b v)
+\item neutral element: \ensuremath{\forall} v \ensuremath{\in} V : 1 v =
+v
+\end{itemize}
+Definition the vector operations '$\oplus$' and '$\odot$':
+\begin{itemize}
+\item $\begin{pmatrix}a_{1}\\
+a_{2}\\
+\vdots\\
+a_{n}
+\end{pmatrix}$$\oplus$$\begin{pmatrix}b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}
+\end{pmatrix}$= $\begin{pmatrix}a_{1} & + & b_{1}\\
+a_{2} & + & b_{2}\\
+\vdots & \vdots & \vdots\\
+a_{n} & + & b_{n}
+\end{pmatrix}$
+\item $a$$\odot$$\begin{pmatrix}b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}
+\end{pmatrix}$=$\begin{pmatrix}a & \cdot & b_{1}\\
+a & \cdot & b_{2}\\
+\vdots & \vdots & \vdots\\
+a & \cdot & b_{3}
+\end{pmatrix}$
+\end{itemize}
+A vector $v$ is a \emph{linear combination} of the vectors $w^{(1)}$,
+$w^{(2)}$,$\ldots$ , $w^{(s)}$if there exist scalars $a^{(i)}$such
+that :
+
+\begin{itemize}
+\item $v$ = $a^{(1)}$$\odot$$w^{(1)}$$\oplus$$a^{(2)}$$\odot$$w^{(2)}$$\oplus$$\cdots$$\oplus$$a^{(i)}$$\odot$$w^{(s)}$
+
+In a vector space we can always find a set of vectors such that all
+elements of the vector space can be written in exactly one way as
+a linear combination of the vectors of the set. Such a set is called
+a basis of the vector space. We will consider only vector spaces where
+the bases have a finite number of elements. We denote a basis by:
+\item e = $\begin{bmatrix}e^{(1)}\\
+e^{(2)}\\
+\vdots\\
+e^{(n)}
+\end{bmatrix}$
+
+The scalars used in this linear combination are called the coordinates
+of x with respect to the basis e:
+\item co(x) = $x$ = ($c_{1}$, $c_{2}$,...,$c_{n}$) \ensuremath{\Leftrightarrow}
+x = $\sum_{i=1}^{n}$$c_{i}$ $\odot$$e^{(i)}$
+
+A function f is called a linear function of a vector space V over
+a field F, if it has the following properties:
+\item \ensuremath{\forall} x, y \ensuremath{\in} V : f(x + y) = f(x) + f(y) 
+\item \ensuremath{\forall} $a$ \ensuremath{\in} F, \ensuremath{\forall}
+x \ensuremath{\in} V : f($a$x) = $a$f(x)
+\end{itemize}
+
+\end{document}
